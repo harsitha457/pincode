@@ -1,3 +1,16 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>
+<ion-content>
+  <table>
+    <tr>
+      <th>Message</th>
+      <th>STatus</th>
+    </tr>
+    <tr *ngFor="let com of lstcomments">
+      <td>{{com.message}}></td>
+      <td>{{com.status}}</td>
+
+    </tr>
+  </table>
+</ion-content>
