@@ -1,16 +1,22 @@
-<ion-app>
+<!--ion-app>
   <ion-router-outlet></ion-router-outlet>
-</ion-app>
+</ion-app!-->
 <ion-content>
+  <ion-card-content>
+    <input type="number" (keypress)="getVal($event)">
+    <ion-button (click)="submit()" type="button">submit</ion-button>
+    <h2>{{currentVal}}</h2>
+  </ion-card-content>
   <table>
     <tr>
       <th>Message</th>
       <th>STatus</th>
     </tr>
-    <tr *ngFor="let com of lstcomments">
-      <td>{{com.message}}></td>
-      <td>{{com.status}}</td>
-
-    </tr>
+    <div *ngFor="let com of lstcomments">
+      <td>{{com.Message}}</td>
+      <td>{{com.Status}}</td>
+      <td>hello</td>
+      <td> {{ 'https://api.postalpincode.in/pincode/' + currentVal}}</td>
+    </div>
   </table>
 </ion-content>
