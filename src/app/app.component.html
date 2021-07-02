@@ -3,8 +3,8 @@
 </ion-app!-->
 <ion-content>
   <ion-card-content>
-    <input type="number" (keypress)="getVal($event)">
-    <ion-button (click)="submit()" type="button">submit</ion-button>
+    <input type= "name" (mouseenter) = "getVal($event)" (mouseleave)="pin($event)" >
+    <ion-button (click)="commit()" type="button">submit</ion-button>
     <h2>{{currentVal}}</h2>
   </ion-card-content>
   <table>
