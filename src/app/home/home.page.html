@@ -5,14 +5,40 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content>
+  <ion-card-content>
+    <input type= "number" (mouseenter) = "getVal($event)" (mouseleave)="pin($event)">
+    <ion-button (click)="commit()" type="button">submit</ion-button>
+    <h2>{{currentVal}}</h2>
+    <td> {{ 'https://api.postalpincode.in/pincode/' + currentVal}}</td>
+  </ion-card-content>
+  <table>
+<tr>
+      <th>Message</th>
+      <th>STatus</th>
+      <th>Name</th>
+      <th>BranchType</th>
+      <th>District</th>
+      <th>State</th>
+      <th>Delivery Status</th>
+</tr>
+    <div *ngFor="let com of lstcomments">
+      <tr>
+      <td>{{com.Message}}</td>
+      <td>{{com.Status}}</td>
+    </tr>
+    </div>
+    <div *ngFor="let com of lstcomments">
+      <div *ngFor = "let con of com.PostOffice">
+      <tr>
+        <td>{{con.Name}}</td>
+        <td>{{con.BranchType}}</td>
+        <td>{{con.District}}</td>
+        <td>{{con.State}}</td>
+        <td>{{con.DeliveryStatus}}</td>
+        </tr>
+      </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-
-
+    </div>
+  </table>
 </ion-content>

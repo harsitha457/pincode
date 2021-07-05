@@ -9,9 +9,6 @@ export class FreeapiService {
   private url: number;
   private full: string;
   constructor(private httpClient: HttpClient) { }
-  //getcomments(): Observable<any>{
-    //return this.httpClient.get('https://api.postalpincode.in/pincode/110001');
-  //}
     geturl(value: number) {
       this.url = value;
   }
