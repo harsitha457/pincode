@@ -1,12 +1,22 @@
 <ion-content>
+  <form #event="ngForm" (ngsubmit)="pin(event)">
   <ion-card-content>
-    <input type= "number" (mouseenter) = "getVal($event)" (mouseleave)="pin($event)">
+    <input type= "number" (mouseleave)="pin($event)">
     <ion-button (click)="commit()" type="button">submit</ion-button>
     <h2>{{currentVal}}</h2>
     <td> {{ 'https://api.postalpincode.in/pincode/' + currentVal}}</td>
   </ion-card-content>
+  <!--ion-card-content>
+    <ion-item>
+      <ion-label size="large"position="floating">Enter Pincode</ion-label>
+      <ion-input required minlength="6" name="name" ngModel ></ion-input>
+
+    </ion-item>
+    <ion-button type="submit">Search</ion-button>
+  </ion-card-content!-->
+  </form>
   <table>
-   <!--tr>
+   <tr>
       <th>Message</th>
       <th>STatus</th>
       <th>Name</th>
@@ -14,7 +24,7 @@
       <th>District</th>
       <th>State</th>
       <th>Delivery Status</th>
-   </tr!-->
+   </tr>
 
       <div *ngFor="let com of lstcomments">
       <td>{{com.Message}}</td>

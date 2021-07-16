@@ -24,10 +24,10 @@ export class HomePage {// eslint-disable-next-line @typescript-eslint/naming-con
   ngOnInit(){}
     // eslint-disable-next-line no-underscore-dangle
     // eslint-disable-next-line no-underscore-dangle
-    getVal(event)
-  {
-    console.log(event.target.value);
-  }
+    //getVal(event)
+  //{
+   // console.log(event.target.value);
+  //}
     pin(event: any){
       this.url = event.target.value;
     // eslint-disable-next-line eqeqeq
